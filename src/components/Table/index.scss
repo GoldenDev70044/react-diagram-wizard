@@ -1,0 +1,52 @@
+.modal-container .modal .modal-body {
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th {
+    text-align: left;
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 5px 10px;
+    width: 220px;
+
+    &:first-child {
+      width: 50px;
+    }
+  }
+
+  td {
+    padding: 5px 10px;
+
+    div {
+      display: flex;
+      input,
+      select {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 5px 0;
+      }
+
+      input.invalid {
+        padding: 3px 10px;
+        border: 1px solid #ff0000!important;
+        border-radius: 4px;
+      }
+
+      select {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 19px;
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+:root {
+  --blue: #3f588f;
+}
+
+html {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  background: #f8f8fb;
+}
+
+.App * {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #556ee6;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  color: #ffffff !important;
+  font-size: 13px !important;
+  line-height: 19px !important;
+  font-weight: normal !important;
+  text-align: center;
+  background: #556ee6;
+  border: 1px solid #556ee6;
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input {
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.App {
+  margin: 50px;
+  padding: 25px;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(18, 38, 63, 0.0313726);
+  border-radius: 4px;
+
+  .icon-arrow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+  }
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+
+  .title {
+    margin: 0;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: flex-end;
+
+    li {
+      padding: 0 10px;
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      a {
+        color: #000000;
+        outline: none;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.diagram {
+  display: flex;
+  flex-wrap: wrap;
+
+  .group-node .diagram-item:first-child {
+    margin-bottom: 30px;
+  }
+}
+
+.diagram-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex-basis: 15%;
+  min-width: 170px;
+  height: fit-content;
+  margin: 0 20px 20px 0;
+  padding: 20px 10px;
+  background: rgba(85, 110, 230, 0.101961);
+  border-radius: 8px 8px 8px 0px;
+
+  &.selected {
+    border: 1px solid var(--blue);
+  }
+
+  button {
+    position: relative;
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+
+  .icon-ellipsis {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      background: #55555570;
+    }
+
+    * {
+      color: #74788d;
+    }
+  }
+
+  .action {
+    margin-bottom: 10px;
+  }
+
+  &.start {
+    margin-left: 0;
+    padding: 58px 0;
+  }
+
+  &.answer .action {
+    margin-bottom: 0;
+  }
+}
